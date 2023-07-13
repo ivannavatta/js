@@ -8,7 +8,8 @@ const Numero_random = Math.ceil(Math.random()*(Max_num - Min_num) + Min_num);
 
     function jugar(){
     let Numero_jugador = 0;
-    while(Numero_jugador !== Numero_random){
+    let Intentos = 5
+    for(let i = 1; i <= Intentos; i++){
 
     Numero_jugador = parseInt(prompt("Encontra el numero entre el 50 y 100:"));
 
@@ -22,7 +23,9 @@ const Numero_random = Math.ceil(Math.random()*(Max_num - Min_num) + Min_num);
         alert("Acertaste el numero era " + Numero_jugador)
     }
 }
-
+if(Intentos>=5){
+alert("game over")
+}
     }
     
    
